@@ -71,7 +71,7 @@ class AppSection:
         col3, col4 = st.columns(2)
         job_experiences = user_information.get('experiences')
         for i in range(len(job_experiences)):
-            col3.subheader(f'Companies {i+1} Information')
+            col3.subheader(f'Company {i+1} Information')
             col4.subheader("    ")
             globals()[f'job_title_{i}'] = col3.text_input(f"Job Title {i+1}",job_experiences[i].get('job_title'))
             globals()[f'company_{i}'] = col4.text_input(f"Company {i+1}",job_experiences[i].get('company'))
@@ -89,7 +89,7 @@ class AppSection:
         col5, col6 = st.columns(2)
         education = user_information.get('education')
         for i in range(len(education)):
-            col5.subheader(f'institutions {i + 1} Information')
+            col5.subheader(f'institution {i + 1} Information')
             col6.subheader("    ")
             globals()[f'institution_{i}'] = col5.text_input(f"Institution {i + 1}", education[i].get('institution'))
             globals()[f'degree_{i}'] = col6.text_input(f"Degree {i + 1}", education[i].get('degree'))
